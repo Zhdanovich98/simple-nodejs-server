@@ -3,9 +3,17 @@ version: '3.9'
 services:
 
   js_app:
-    image: zhdanovich1998/$JOB_NAME:$BUILD_NUMBER
+  #  image: zhdanovich1998/$JOB_NAME:$BUILD_NUMBER
+    image: zhdanovich1998/js_app:main
     container_name: task6
     ports:
       - "4000:4000"
-    networks:
-      - admin
+    volumes:
+      - ./run.sh:/usr/run.sh
+    command: ["sh","./run.sh"]
+
+  postgres:
+    image: postgres:14
+    container_name: postgres-uniq
+    ports:
+      - "5432:5432"
