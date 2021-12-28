@@ -16,3 +16,7 @@ services:
     container_name: postgres-uniq
     ports:
       - "5432:5432"
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: DB
