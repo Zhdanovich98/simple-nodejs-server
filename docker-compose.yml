@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+
+services:
+
+  task_6:
+    image: zhdanovich1998/$JOB_NAME:$BUILD_NUMBER
+    container_name: task6
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: ldap
+      MYSQL_USER: ilya
+      MYSQL_PASSWORD: ilya
+    ports:
+      - "389:389"
+      - "636:636"
+    networks:
+      - admin
+
+networks:
+  admin:
+    driver: bridge
