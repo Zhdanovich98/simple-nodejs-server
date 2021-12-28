@@ -2,9 +2,7 @@ version: '3.9'
 
 services:
 
-services:
-
-  task_6:
+  js_app:
     image: zhdanovich1998/$JOB_NAME:$BUILD_NUMBER
     container_name: task6
     environment:
@@ -13,8 +11,7 @@ services:
       MYSQL_USER: ilya
       MYSQL_PASSWORD: ilya
     ports:
-      - "389:389"
-      - "636:636"
+      - "4000:4000"
     networks:
       - admin
 
