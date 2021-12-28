@@ -5,11 +5,6 @@ services:
   js_app:
     image: zhdanovich1998/$JOB_NAME:$BUILD_NUMBER
     container_name: task6
-    environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: ldap
-      MYSQL_USER: ilya
-      MYSQL_PASSWORD: ilya
     ports:
       - "4000:4000"
     networks:
