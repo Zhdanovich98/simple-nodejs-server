@@ -4,13 +4,15 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm ci
+RUN npm ci && adduser -S clown
 
 COPY . .
 
 EXPOSE 4000
 
-RUN adduser -S clown
+RUN apk update && apk --no-cache add curl
+
+#RUN useradd -ms /bin/bash clown
 
 USER clown
 

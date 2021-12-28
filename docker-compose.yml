@@ -7,9 +7,9 @@ services:
     container_name: task6
     ports:
       - "4000:4000"
-#    volumes:
-#      - ./run.sh:/usr/run.sh
-    command: ["sh","/usr/src/app/app.js"]
+    volumes:
+      - ./run.sh:/usr/run.sh
+    command: ["sh","/usr/run.sh"]
 
   postgres:
     image: postgres:14
