@@ -3,8 +3,7 @@ version: '3.9'
 services:
 
   js_app:
-  #  image: zhdanovich1998/$JOB_NAME:$BUILD_NUMBER
-    image: zhdanovich1998/js_app:main
+    image: zhdanovich1998/$JOB_NAME:$BUILD_NUMBER
     container_name: task6
     ports:
       - "4000:4000"
