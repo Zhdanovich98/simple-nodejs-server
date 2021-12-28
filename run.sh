@@ -6,4 +6,4 @@ until [ $(curl --write-out "%{local_ip}" "http://postgres:5432" --output /dev/nu
 done
 
 echo 'Postgres run!'
-node app.js
+node /usr/src/app/app.js
